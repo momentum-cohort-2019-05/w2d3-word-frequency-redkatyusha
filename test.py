@@ -5,13 +5,19 @@
 #print(ainulindalë.read())
 
 # Open test.txt with read privileges and set as variable "ainulindalë"
-with open("test.txt", "r") as ainulindalë:
+#with open("test.txt", "r") as ainulindalë:
     # For each line in ainulindalë, do the next thing
-    for line in ainulindalë:
+    #for line in ainulindalë:
         # Split each word into its own line
-        for word in line.split():
+        #for word in line.split():
             # Print all the words as separate lines
-            print(word)
+            #print(word)
 
-# Import regex for stripping punctuation/spaces
-#import re
+#with open("test.txt", "r") as source_file:
+#    source_str = str((source_file.readline()))
+
+#clean_text = ""
+#alphabet_and_space = "abcdefghijklmnopqrstuvwxyz"
+#for character in source_str:
+#    if character.lower() in alphabet_and_space:
+#        clean_text += character.lower()
