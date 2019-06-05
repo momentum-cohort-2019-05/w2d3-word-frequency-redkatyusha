@@ -10,7 +10,8 @@ with open("test.txt", "r") as ainulindalë:
     for line in ainulindalë:
         # Split each word into its own line
         for word in line.split():
+            # Print all the words as separate lines
             print(word)
 
 # Import regex for stripping punctuation/spaces
-import re
+#import re
