@@ -10,21 +10,21 @@ def print_word_freq(file):
     pass
 
 
-if __name__ == "__main__":
-    import argparse
-    from pathlib import Path
+#if __name__ == "__main__":
+#    import argparse
+#    from pathlib import Path
 
-    parser = argparse.ArgumentParser(
-        description='Get the word frequency in a text file.')
-    parser.add_argument('file', help='file to read')
-    args = parser.parse_args()
+#    parser = argparse.ArgumentParser(
+#        description='Get the word frequency in a text file.')
+#    parser.add_argument('file', help='file to read')
+#    args = parser.parse_args()
 
-    file = Path(args.file)
-    if file.is_file():
-        print_word_freq(file)
-    else:
-        print(f"{file} does not exist!")
-        exit(1)
+#    file = Path(args.file)
+#    if file.is_file():
+#        print_word_freq(file)
+#    else:
+#        print(f"{file} does not exist!")
+#        exit(1)
 
 # Import regex module
 import re
@@ -44,3 +44,17 @@ clean_file = clean_file.split()
 clean_file = sorted(clean_file)
 
 #print(clean_file)
+
+original_list = []
+for word in clean_file:
+    if word in clean_file:
+        original_list.append(word)
+
+clean_list = {}
+for word in original_list:
+    if word in clean_list:
+        clean_list[word] += 1
+    else:
+        clean_list[word] = 1
+
+print(clean_list)
