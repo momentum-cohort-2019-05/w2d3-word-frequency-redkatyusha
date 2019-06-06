@@ -25,3 +25,22 @@ if __name__ == "__main__":
     else:
         print(f"{file} does not exist!")
         exit(1)
+
+# Import regex module
+import re
+
+# Open file, read lines
+original_file = open("seneca_falls.txt", "r")
+original_file = original_file.readlines()
+
+original_file = ' '.join(original_file)
+
+# Clean up file
+original_file = original_file.lower()
+clean_file = re.sub(r'[^a-z ]', "", original_file)
+
+# Split and sort 
+clean_file = clean_file.split()
+clean_file = sorted(clean_file)
+
+#print(clean_file)
